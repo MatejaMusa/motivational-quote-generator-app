@@ -2,14 +2,17 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const generateAQuote = /* GraphQL */ `
+  query GenerateAQuote($input: AWSJSON!) {
+    generateAQuote(input: $input)
+  }
+`;
 export const getQuoteAppData = /* GraphQL */ `
   query GetQuoteAppData($id: ID!) {
     getQuoteAppData(id: $id) {
       id
       queryName
       quotesGenerated
-      createAt
-      updateAt
       createdAt
       updatedAt
       __typename
@@ -27,8 +30,6 @@ export const listQuoteAppData = /* GraphQL */ `
         id
         queryName
         quotesGenerated
-        createAt
-        updateAt
         createdAt
         updatedAt
         __typename
@@ -57,8 +58,6 @@ export const quotesQueryName = /* GraphQL */ `
         id
         queryName
         quotesGenerated
-        createAt
-        updateAt
         createdAt
         updatedAt
         __typename
@@ -66,10 +65,5 @@ export const quotesQueryName = /* GraphQL */ `
       nextToken
       __typename
     }
-  }
-`;
-export const generateAQuote = /* GraphQL */ `
-  query GenerateAQuote($input: AWSJSON!) {
-    generateAQuote(input: $input)
   }
 `;

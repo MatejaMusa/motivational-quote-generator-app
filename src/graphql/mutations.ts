@@ -11,8 +11,6 @@ export const createQuoteAppData = /* GraphQL */ `
       id
       queryName
       quotesGenerated
-      createAt
-      updateAt
       createdAt
       updatedAt
       __typename
@@ -28,8 +26,6 @@ export const updateQuoteAppData = /* GraphQL */ `
       id
       queryName
       quotesGenerated
-      createAt
-      updateAt
       createdAt
       updatedAt
       __typename
@@ -45,8 +41,6 @@ export const deleteQuoteAppData = /* GraphQL */ `
       id
       queryName
       quotesGenerated
-      createAt
-      updateAt
       createdAt
       updatedAt
       __typename

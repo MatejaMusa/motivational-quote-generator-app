@@ -6,14 +6,16 @@
         "authConfig": {
           "additionalAuthenticationProviders": [
             {
-              "authenticationType": "AWS_IAM"
+              "apiKeyConfig": {
+                "apiKeyExpirationDate": "2023-08-22T10:21:55.705Z",
+                "apiKeyExpirationDays": 7,
+                "description": "API key for quote generator"
+              },
+              "authenticationType": "API_KEY"
             }
           ],
           "defaultAuthentication": {
-            "apiKeyConfig": {
-              "apiKeyExpirationDays": 7
-            },
-            "authenticationType": "API_KEY"
+            "authenticationType": "AWS_IAM"
           }
         }
       },
@@ -22,7 +24,7 @@
     }
   },
   "auth": {
-    "motivationalquotegen18832132": {
+    "motivationalquotegende543dfc": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
@@ -48,26 +50,26 @@
     }
   },
   "function": {
-    "inspoquoteLamba": {
+    "inspoquoteLambda": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
   },
   "parameters": {
-    "AMPLIFY_function_inspoquoteLamba_deploymentBucketName": {
+    "AMPLIFY_function_inspoquoteLambda_deploymentBucketName": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "inspoquoteLamba"
+          "resourceName": "inspoquoteLambda"
         }
       ]
     },
-    "AMPLIFY_function_inspoquoteLamba_s3Key": {
+    "AMPLIFY_function_inspoquoteLambda_s3Key": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "inspoquoteLamba"
+          "resourceName": "inspoquoteLambda"
         }
       ]
     }

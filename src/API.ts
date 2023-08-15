@@ -6,15 +6,15 @@ export type CreateQuoteAppDataInput = {
   id?: string | null,
   queryName: string,
   quotesGenerated: number,
-  createAt: string,
-  updateAt: string,
+  createdAt?: string | null,
+  updatedAt?: string | null,
 };
 
 export type ModelQuoteAppDataConditionInput = {
   queryName?: ModelStringInput | null,
   quotesGenerated?: ModelIntInput | null,
-  createAt?: ModelStringInput | null,
-  updateAt?: ModelStringInput | null,
+  createdAt?: ModelStringInput | null,
+  updatedAt?: ModelStringInput | null,
   and?: Array< ModelQuoteAppDataConditionInput | null > | null,
   or?: Array< ModelQuoteAppDataConditionInput | null > | null,
   not?: ModelQuoteAppDataConditionInput | null,
@@ -77,8 +77,6 @@ export type QuoteAppData = {
   id: string,
   queryName: string,
   quotesGenerated: number,
-  createAt: string,
-  updateAt: string,
   createdAt: string,
   updatedAt: string,
 };
@@ -87,8 +85,8 @@ export type UpdateQuoteAppDataInput = {
   id: string,
   queryName?: string | null,
   quotesGenerated?: number | null,
-  createAt?: string | null,
-  updateAt?: string | null,
+  createdAt?: string | null,
+  updatedAt?: string | null,
 };
 
 export type DeleteQuoteAppDataInput = {
@@ -99,8 +97,8 @@ export type ModelQuoteAppDataFilterInput = {
   id?: ModelIDInput | null,
   queryName?: ModelStringInput | null,
   quotesGenerated?: ModelIntInput | null,
-  createAt?: ModelStringInput | null,
-  updateAt?: ModelStringInput | null,
+  createdAt?: ModelStringInput | null,
+  updatedAt?: ModelStringInput | null,
   and?: Array< ModelQuoteAppDataFilterInput | null > | null,
   or?: Array< ModelQuoteAppDataFilterInput | null > | null,
   not?: ModelQuoteAppDataFilterInput | null,
@@ -138,8 +136,8 @@ export type ModelSubscriptionQuoteAppDataFilterInput = {
   id?: ModelSubscriptionIDInput | null,
   queryName?: ModelSubscriptionStringInput | null,
   quotesGenerated?: ModelSubscriptionIntInput | null,
-  createAt?: ModelSubscriptionStringInput | null,
-  updateAt?: ModelSubscriptionStringInput | null,
+  createdAt?: ModelSubscriptionStringInput | null,
+  updatedAt?: ModelSubscriptionStringInput | null,
   and?: Array< ModelSubscriptionQuoteAppDataFilterInput | null > | null,
   or?: Array< ModelSubscriptionQuoteAppDataFilterInput | null > | null,
 };
@@ -197,8 +195,6 @@ export type CreateQuoteAppDataMutation = {
     id: string,
     queryName: string,
     quotesGenerated: number,
-    createAt: string,
-    updateAt: string,
     createdAt: string,
     updatedAt: string,
   } | null,
@@ -215,8 +211,6 @@ export type UpdateQuoteAppDataMutation = {
     id: string,
     queryName: string,
     quotesGenerated: number,
-    createAt: string,
-    updateAt: string,
     createdAt: string,
     updatedAt: string,
   } | null,
@@ -233,11 +227,17 @@ export type DeleteQuoteAppDataMutation = {
     id: string,
     queryName: string,
     quotesGenerated: number,
-    createAt: string,
-    updateAt: string,
     createdAt: string,
     updatedAt: string,
   } | null,
+};
+
+export type GenerateAQuoteQueryVariables = {
+  input: string,
+};
+
+export type GenerateAQuoteQuery = {
+  generateAQuote?: string | null,
 };
 
 export type GetQuoteAppDataQueryVariables = {
@@ -250,8 +250,6 @@ export type GetQuoteAppDataQuery = {
     id: string,
     queryName: string,
     quotesGenerated: number,
-    createAt: string,
-    updateAt: string,
     createdAt: string,
     updatedAt: string,
   } | null,
@@ -271,8 +269,6 @@ export type ListQuoteAppDataQuery = {
       id: string,
       queryName: string,
       quotesGenerated: number,
-      createAt: string,
-      updateAt: string,
       createdAt: string,
       updatedAt: string,
     } | null >,
@@ -296,21 +292,11 @@ export type QuotesQueryNameQuery = {
       id: string,
       queryName: string,
       quotesGenerated: number,
-      createAt: string,
-      updateAt: string,
       createdAt: string,
       updatedAt: string,
     } | null >,
     nextToken?: string | null,
   } | null,
-};
-
-export type GenerateAQuoteQueryVariables = {
-  input: string,
-};
-
-export type GenerateAQuoteQuery = {
-  generateAQuote?: string | null,
 };
 
 export type OnCreateQuoteAppDataSubscriptionVariables = {
@@ -323,8 +309,6 @@ export type OnCreateQuoteAppDataSubscription = {
     id: string,
     queryName: string,
     quotesGenerated: number,
-    createAt: string,
-    updateAt: string,
     createdAt: string,
     updatedAt: string,
   } | null,
@@ -340,8 +324,6 @@ export type OnUpdateQuoteAppDataSubscription = {
     id: string,
     queryName: string,
     quotesGenerated: number,
-    createAt: string,
-    updateAt: string,
     createdAt: string,
     updatedAt: string,
   } | null,
@@ -357,8 +339,6 @@ export type OnDeleteQuoteAppDataSubscription = {
     id: string,
     queryName: string,
     quotesGenerated: number,
-    createAt: string,
-    updateAt: string,
     createdAt: string,
     updatedAt: string,
   } | null,
