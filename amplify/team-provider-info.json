@@ -1,0 +1,42 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-motivationalquotegen-dev-74417-authRole",
+      "UnauthRoleArn": "arn:aws:iam::746542669905:role/amplify-motivationalquotegen-dev-74417-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::746542669905:role/amplify-motivationalquotegen-dev-74417-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-motivationalquotegen-dev-74417-deployment",
+      "UnauthRoleName": "amplify-motivationalquotegen-dev-74417-unauthRole",
+      "StackName": "amplify-motivationalquotegen-dev-74417",
+      "StackId": "arn:aws:cloudformation:eu-central-1:746542669905:stack/amplify-motivationalquotegen-dev-74417/c84b0c40-3b2e-11ee-83b8-0a7af6e4d1a8",
+      "AmplifyAppId": "d3mifglydngt7o"
+    }
+  },
+  "quotegen": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-motivationalquotegen-quotegen-74823-authRole",
+      "UnauthRoleArn": "arn:aws:iam::746542669905:role/amplify-motivationalquotegen-quotegen-74823-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::746542669905:role/amplify-motivationalquotegen-quotegen-74823-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-motivationalquotegen-quotegen-74823-deployment",
+      "UnauthRoleName": "amplify-motivationalquotegen-quotegen-74823-unauthRole",
+      "StackName": "amplify-motivationalquotegen-quotegen-74823",
+      "StackId": "arn:aws:cloudformation:eu-central-1:746542669905:stack/amplify-motivationalquotegen-quotegen-74823/5ab72dc0-3b2f-11ee-9dcc-0a46abfb2b3b",
+      "AmplifyAppId": "d3mifglydngt7o"
+    },
+    "categories": {
+      "auth": {
+        "motivationalquotegen18832132": {}
+      },
+      "function": {
+        "inspoquoteLamba": {
+          "deploymentBucketName": "amplify-motivationalquotegen-quotegen-74823-deployment",
+          "s3Key": "amplify-builds/inspoquoteLamba-39454142482b70464252-build.zip"
+        }
+      },
+      "api": {
+        "motivationalquotegen": {}
+      }
+    }
+  }
+}
