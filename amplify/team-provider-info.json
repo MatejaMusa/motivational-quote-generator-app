@@ -36,6 +36,12 @@
       },
       "api": {
         "motivationalquotegen": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d2n2pr6fis725r",
+          "type": "cicd"
+        }
       }
     }
   }
