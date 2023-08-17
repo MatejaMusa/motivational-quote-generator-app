@@ -2,34 +2,34 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 
 interface ImageBlobProps {
-    quoteReceived: String;
+    quoteReceived: String | null;
     blobUrl: string | null;
 }
 
 const ImageBlob = ({ 
     quoteReceived, 
-    // blobUrl
+    blobUrl
 }: ImageBlobProps) => {
-    const[blobUrl, setBlobUrl] = useState<string | null>(null);
+    // const[blobUrl, setBlobUrl] = useState<string | null>(null);
 
-    useEffect(() => {
-        const response = {
-            "statusCode": 200,
-            "headers": {
-                "Content-Type": "image/png",
-                "Access-Control-Allow-Origin": "*"
-            },
-            "body": blob,
-            "isBase64Encoded": true
-        }
-        const binaryData = Buffer.from(response.body, 'base64');
-        const blob = new Blob([binaryData], { type: response.headers["Content-Type"] });
-        const newBloblUrl = URL.createObjectURL(blob);
-        setBlobUrl(newBloblUrl);
-        return () => {
-            URL.revokeObjectURL(newBloblUrl);
-        }
-    },[])
+    // useEffect(() => {
+    //     const response = {
+    //         "statusCode": 200,
+    //         "headers": {
+    //             "Content-Type": "image/png",
+    //             "Access-Control-Allow-Origin": "*"
+    //         },
+    //         "body": blob,
+    //         "isBase64Encoded": true
+    //     }
+    //     const binaryData = Buffer.from(response.body, 'base64');
+    //     const blob = new Blob([binaryData], { type: response.headers["Content-Type"] });
+    //     const newBloblUrl = URL.createObjectURL(blob);
+    //     setBlobUrl(newBloblUrl);
+    //     return () => {
+    //         URL.revokeObjectURL(newBloblUrl);
+    //     }
+    // },[]);
 
     if (!blobUrl) {
         return null;
